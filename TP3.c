@@ -98,7 +98,31 @@ int main() {
     Product p4 = {104, "Monitor", 300};
     
     printf("\n3. Inserting products...\n");
- return 0;
-}
+     head = insertAtlast(head, p3);
+    printf("   Inserted Laptop at last\n");
     
-    head 
+    head = insertAtfirst(head, p2);
+    printf("   Inserted Mouse at first\n");
+    
+    head = insertAtlast(head, p4);
+    printf("   Inserted Keyboard at last\n");
+    
+    head = insertAtfirst(head, p1);
+    printf("   Inserted Monitor at first\n");
+    
+    printf("\n4. Displaying all products:\n");
+    displayProducts(head);
+    
+    printf("\n5. Testing with new empty list:\n");
+    Node *newList = createEmptyList();
+    displayProducts(newList);
+    
+    Product p5 = {105, "Headphones", 50};
+    newList = insertAtBeginning(newList, p5);
+    printf("After inserting one product in empty list:\n");
+    displayProducts(newList);
+    
+    printf("\n=== Program Finished ===\n");
+    
+    return 0;
+}
